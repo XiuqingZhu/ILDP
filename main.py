@@ -52,7 +52,7 @@ col1, col2 = st.columns([1, 2])
 # Display logo in the first column
 with col1:
     st.image(logo)
-    st.write("Supported by the service of the professor Xiuqing Zhu at the AI-Drug Lab, the affiliated Brain Hospital, Guangzhou Medical University, China. If you have any questions, please feel free to contact me at 2018760376@gzhmu.edu.cn. ") 
+    st.write("Supported by the service of Xiuqing Zhu at the AI-Drug Lab, the affiliated Brain Hospital, Guangzhou Medical University, China. If you have any questions, please feel free to contact me at 2018760376@gzhmu.edu.cn. ") 
 
 # Define feature names
 feature_df = pd.read_csv('./features_for_ML.csv')
