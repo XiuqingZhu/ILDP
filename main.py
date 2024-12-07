@@ -44,7 +44,7 @@ def generate_feature_vector(smiles, feature_order):
     return feature_vector
 
 # Streamlit user interface
-st.title("Interstitial Lung Disease or Pneumonitis Predictor")
+st.title("Inflammatory Lung Diseases Predictor")
 
 # Create three columns for layout
 col1, col2 = st.columns([1, 2])
@@ -60,7 +60,7 @@ feature_names = feature_df['Features'].values.tolist()
 
 # Content in the second column
 with col2:
-    st.write("**Please enter a SMILE string of a compound to predict its risk of interstitial lung disease.**")
+    st.write("**Please enter a SMILE string of a compound to predict its risk of inflammatory lung diseases.**")
 
     # Smiles: string input
     smiles = st.text_input("SMILE (For example: CCCCOOCC):", value="")
@@ -93,8 +93,8 @@ with col2:
                 )
             else:
                 advice = (
-                    f"According to our model, the compound you submitted has a low risk of interstitial lung disease or pneumonitis. "
-                    f"The model predicts that the likelihood of not experiencing interstitial lung disease or pneumonitis is {probability:.2f}%. "
+                    f"According to our model, the compound you submitted has a low risk of interstitial lung disease and pneumonitis. "
+                    f"The model predicts that the likelihood of not experiencing interstitial lung disease and pneumonitis is {probability:.2f}%. "
                 )
 
             st.write(advice)
